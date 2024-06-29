@@ -10,7 +10,7 @@ Create and use a virtual environment:
 Install the requirements:  
 `python -m pip install -r requirements.txt`
 
-# Reproduce experiments:
+# Reproduce experiments
 
 ## Setup the experiment environment
 
