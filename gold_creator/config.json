@@ -1,6 +1,6 @@
 {
     "io": {
-        "flat_file": "flat_files/train.txt",
+        "flat_file": "data/gold.txt",
         "gold_file": "experiment.txt",
         "order_file": "order.txt"
     },

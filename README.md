@@ -25,7 +25,12 @@ Install the requirements:
 
 4. Change the content of the copy of the `config.json` file to match the experiment setup you want. Note: You will need to input your API key from OpenAI in this file.
 
-- Typically the flat file will be the gold-gold file (`gold.txt`) because this is where you take the samples from, this allows copying the F-primes.
+- Typically the flat file will be the "gold-gold" file (`gold.txt`) because this is where you take the samples from, this allows copying the F-primes.
+* The "gold-gold" is a text file with requirement sentences. Each sentence should have:
+    * id: the number of the requirement, needed to manipulate the order of the requirements
+    * req: the requirement sentence as extracted from the document
+    * F-prime: the translation of the requirement into description logic, needed to evaluate the experiment
+    * See data/gold.txt for an example
 - The gold file and the order file are the empty files you created above (you're creating a new gold standard) and should be empty when you start a new experiment.
     - E.g., `experiment.txt` and ``order.txt``
 
