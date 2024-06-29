@@ -5,7 +5,7 @@ scikit-learn
 numpy
 more-itertools
 jiwer
-openai
+openai==0.28
 matplotlib
 networkx
 pydot
