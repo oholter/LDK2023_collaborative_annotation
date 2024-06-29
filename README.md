@@ -4,16 +4,16 @@ Experiments on semantic parsing of technical requirements
 
 # Preparations
 Create and use a virtual environment:
-`python -m pip venv venv`
-`./venv/bin/activate`
+`python -m venv venv`  
+`source ./venv/bin/activate`  
 
-Install the requirements:
+Install the requirements:  
 `python -m pip install -r requirements.txt`
 
 # Reproduce experiments:
-Create a folder for the experiment:
+Create a folder for the experiment:  
 `mkdir [experiment]`
-create a copy of the `config.json` file:
+create a copy of the `config.json` file:  
 `cp gold_creator/config.json [experiment]`
 Change the content of the copy of the `config.json` file to match the experiment setup you want.
 Note: You'll need to input your API key from OpenAI in this file
