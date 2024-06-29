@@ -20,11 +20,14 @@ Install the requirements:
 2. Put a copy of the `config.json` file in the experiment folder:  
 `cp gold_creator/config.json [experiment]`  
 
-3. change the content of the copy of the `config.json` file to match the experiment setup you want. Note: You will need to input your API key from OpenAI in this file.
+3. Create empty files for the new gold standard and the order:  
+``touch experiment.txt order.txt``
+
+4. Change the content of the copy of the `config.json` file to match the experiment setup you want. Note: You will need to input your API key from OpenAI in this file.
 
 - Typically the flat file will be the gold-gold file (`gold.txt`) because this is where you take the samples from, this allows copying the F-primes.
-- Both the gold file and the order file are empty (you're creating a new gold standard) when you start a new experiment.
-    - e.g., `experiment.txt` and ``order.txt``
+- The gold file and the order file are the empty files you created above (you're creating a new gold standard) and should be empty when you start a new experiment.
+    - E.g., `experiment.txt` and ``order.txt``
 
 ## Running and evaluating the experiment
 
