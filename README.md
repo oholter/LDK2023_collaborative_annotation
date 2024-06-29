@@ -14,12 +14,13 @@ Install the requirements:
 
 ## Setup the experiment environment
 
-Create a folder for the experiment:  
+1. Create a folder for the experiment:  
 `mkdir [experiment]`  
-Create a copy of the `config.json` file:  
+
+2. Put a copy of the `config.json` file in the experiment folder:  
 `cp gold_creator/config.json [experiment]`  
-Next, change the content of the copy of the `config.json` file to match the experiment setup you want.
-Note: You will need to input your API key from OpenAI in this file.
+
+3. change the content of the copy of the `config.json` file to match the experiment setup you want. Note: You will need to input your API key from OpenAI in this file.
 
 - Typically the flat file will be the gold-gold file (`gold.txt`) because this is where you take the samples from, this allows copying the F-primes.
 - Both the gold file and the order file are empty (you're creating a new gold standard) when you start a new experiment.
