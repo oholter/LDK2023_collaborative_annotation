@@ -1,0 +1,26 @@
+{
+    "io": {
+        "flat_file": "flat_files/train.txt",
+        "gold_file": "gold/gold.txt",
+        "order_file": "gold/order.txt"
+    },
+    "openai": {
+        "api_key":"XXX",
+        "model": "text-davinci-003",
+        "temperature":1,
+        "stop": ["\n"],
+        "top_p": 1,
+        "n": 1,
+        "max_tokens": 256
+    },
+    "prompt": {
+        "ids": [75,284,389,478,493,499,595,696,761,763,913,998,1089,1144,1292,1477,1552,1635,1839,1881],
+        "n_samples": 20,
+        "headers": false,
+        "strategy": "most similar",
+        "xstrategy": "random",
+        "xstrategy": "ids",
+        "sort": "desc",
+        "xsort": "asc"
+    }
+}

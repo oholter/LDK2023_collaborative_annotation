@@ -1,0 +1,12 @@
+pytorch_lightning
+nltk
+transformers
+scikit-learn
+numpy
+more-itertools
+jiwer
+openai
+matplotlib
+networkx
+pydot
+sacrebleu
