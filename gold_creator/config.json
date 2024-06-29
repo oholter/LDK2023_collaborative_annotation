@@ -1,8 +1,8 @@
 {
     "io": {
         "flat_file": "flat_files/train.txt",
-        "gold_file": "gold/gold.txt",
-        "order_file": "gold/order.txt"
+        "gold_file": "experiment.txt",
+        "order_file": "order.txt"
     },
     "openai": {
         "api_key":"XXX",
