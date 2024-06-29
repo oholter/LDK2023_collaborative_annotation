@@ -30,7 +30,7 @@ Install the requirements:
     * id: the number of the requirement, needed to manipulate the order of the requirements
     * req: the requirement sentence as extracted from the document
     * F-prime: the translation of the requirement into description logic, needed to evaluate the experiment
-    * See data/gold.txt for an example
+    * See ``data/gold.txt`` for an example
 - The gold file and the order file are the empty files you created above (you're creating a new gold standard) and should be empty when you start a new experiment.
     - E.g., `experiment.txt` and ``order.txt``
 

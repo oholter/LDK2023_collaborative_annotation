@@ -1,4 +1,4 @@
 id: 0
 req: Equipment made of metal exposed to seawater shall have an anti-corrosive coating.
 headers: equipment
-    F-prime: Equipment ⊓ ∃madeOf.Metal ⊓ ∃exposedTo.SeaWater ⊑ ∃hasFeature.AntiCorrosiveCoating
+F-prime: Equipment ⊓ ∃madeOf.Metal ⊓ ∃exposedTo.SeaWater ⊑ ∃hasFeature.AntiCorrosiveCoating
