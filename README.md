@@ -18,7 +18,7 @@ Install the requirements:
 
 ## Setup the experiment environment
 
-1. Create a folder for the experiment:
+1. Create a folder for the experiment:  
 `mkdir [experiment]`
 
 2. Put a copy of the `config.json` file in the experiment folder:  
