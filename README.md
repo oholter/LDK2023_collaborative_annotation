@@ -4,7 +4,7 @@ Experiments on semantic parsing of technical requirements.
 
 Note: You need requirement sentences extracted from PDF documents to conduct the experiments. In addition, the sentences must be annotated manually with DL formulas (F-prime) to do the evaluation. Tools to extract requirements from PDF documents and convert them into JSONL are found in the [req_extractor library](https://github.com/oholter/req_extractor).
 
-As of June 2024, the documents used in the paper can be downloaded from DNV at (https://www.veracity.com/).
+As of June 2024, the documents used in the paper can be downloaded from DNV at [https://www.veracity.com/].
 
 # Preparations
 Create and use a virtual environment:
