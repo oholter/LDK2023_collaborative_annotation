@@ -26,7 +26,7 @@ Install the requirements:
 4. Change the content of the copy of the `config.json` file to match the experiment setup you want. Note: You will need to input your API key from OpenAI in this file.
 
 - Typically the flat file will be the "gold-gold" file (`gold.txt`) because this is where you take the samples from, this allows copying the F-primes.
-* The "gold-gold" is a text file with requirement sentences. Each sentence should have:
+* The "gold-gold" is a text file with requirement sentences. These files can be generated using tools in the [https://github.com/oholter/req_extractor](req_extractor library). Each sentence should have:
     * id: the number of the requirement, needed to manipulate the order of the requirements
     * req: the requirement sentence as extracted from the document
     * F-prime: the translation of the requirement into description logic, needed to evaluate the experiment
