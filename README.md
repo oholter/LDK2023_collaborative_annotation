@@ -1,6 +1,10 @@
 # Semantic parsing of requirements
 
-Experiments on semantic parsing of technical requirements
+Experiments on semantic parsing of technical requirements.
+
+Note: You need requirement sentences extracted from PDF documents to conduct the experiments. In addition, the sentences must be annotated manually with DL formulas (F-prime) to do the evaluation. Tools to extract requirements from PDF documents and convert them into JSONL are found in the [req_extractor library](https://github.com/oholter/req_extractor).
+
+As of June 2024, the documents used in the paper can be downloaded from DNV at (https://www.veracity.com/).
 
 # Preparations
 Create and use a virtual environment:
@@ -23,20 +27,24 @@ Install the requirements:
 3. Create empty files for the new gold standard and the order:
 ``touch experiment.txt order.txt``
 
-4. Change the content of the copy of the `config.json` file to match the experiment setup you want. Note: You will need to input your API key from OpenAI in this file.
+4. Create a *flat file* from a JSONL file with requirement sentences:  
+``python -m utils.create_flat_file [JSONL file]``
+
+
+5. Change the content of the copy of the `config.json` file to match the experiment setup you want. Note: You will need to input your API key from OpenAI in this file.
+
 
 - Typically the flat file will be the "gold-gold" file (`gold.txt`) because this is where you take the samples from, this allows copying the F-primes.
-* The "gold-gold" is a text file with requirement sentences. These files can be generated using tools in the [req_extractor library](https://github.com/oholter/req_extractor). Each sentence should have:
+* The "gold-gold" is a text file with requirement sentences. Each sentence in the flat file will have:
     * id: the number of the requirement, needed to manipulate the order of the requirements
     * req: the requirement sentence as extracted from the document
-    * F-prime: the translation of the requirement into description logic, needed for evaluation and added manually.
+    * F-prime: the translation of the requirement into description logic, needed for evaluation. Added manually.
     * See ``data/gold.txt`` for an example
 - The gold file and the order file are the empty files you created above (you're creating a new gold standard) and should be empty when you start a new experiment.
     - E.g., `experiment.txt` and ``order.txt``
 
 ## Running and evaluating the experiment
 
-Note: You need requirement sentences as described above to conduct the experiments, and the sentences must be annotated manually with DL formulas (F-prime) to do the evaluation. Tools to extract requirements from PDF documents are found in the [req_extractor library](https://github.com/oholter/req_extractor).
 
 1. Run the experiments:
 `python -m gold_creator.runner_all --cfg [experiment]/config.json`
