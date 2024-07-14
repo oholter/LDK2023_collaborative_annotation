@@ -1,33 +1,35 @@
-# Semantic parsing of requirements
+# Human-Machine Collaborative Annotation: A Case Study with GPT-3
 
-Experiments on semantic parsing of technical requirements.
+This repository contains the code from the paper
+[Human-Machine Collaborative Annotation: A Case Study with GPT-3](https://aclanthology.org/2023.ldk-1.17.pdf)
+presented at LDK 2023.
 
 Note: You need requirement sentences extracted from PDF documents to conduct the experiments. In addition, the sentences must be annotated manually with DL formulas (F-prime) to do the evaluation. Tools to extract requirements from PDF documents and convert them into JSONL are found in the [req_extractor library](https://github.com/oholter/req_extractor).
 
 As of June 2024, the documents used in the paper can be downloaded from DNV at https://www.veracity.com/.
 
 # Preparations
-Create and use a virtual environment:  
-`python -m venv venv`  
-`source ./venv/bin/activate`  
+Create and use a virtual environment:
+`python -m venv venv`
+`source ./venv/bin/activate`
 
-Install the requirements:  
+Install the requirements:
 `python -m pip install -r requirements.txt`
 
 # Reproduce experiments
 
 ## Setup the experiment environment
 
-1. Create a folder for the experiment:  
+1. Create a folder for the experiment:
 `mkdir [experiment]`
 
-2. Put a copy of the `config.json` file in the experiment folder:  
+2. Put a copy of the `config.json` file in the experiment folder:
 `cp gold_creator/config.json [experiment]`
 
-3. Create empty files for the new gold standard and the order:  
+3. Create empty files for the new gold standard and the order:
 ``touch experiment.txt order.txt``
 
-4. Create a *flat file* from a JSONL file with requirement sentences:  
+4. Create a *flat file* from a JSONL file with requirement sentences:
 ``python -m utils.create_flat_file [JSONL file]``
 
 
@@ -46,15 +48,15 @@ Install the requirements:
 ## Running and evaluating the experiment
 
 
-1. Run the experiments:  
+1. Run the experiments:
 `python -m gold_creator.runner_all --cfg [experiment]/config.json`
 
-2. Calculate the scores:  
+2. Calculate the scores:
 `python -m utils.calculate_measures [experiment]/[experiment.txt] -swjpeg`
 The results are saved directly in the `experiment.txt` file
 
-3. visualize the results:  
+3. visualize the results:
 `python -m visualization.visualizer [experiment/experiment.txt] [edit|semantic|*] --order [order.txt] [--aggregate]`
 
-4. Export the results to latex: prefix is a name prefix for the macro name:  
+4. Export the results to latex: prefix is a name prefix for the macro name:
 ``python -m utils.experiment_to_latex_macro [experiment/experiment.txt] [PREFIX]``
